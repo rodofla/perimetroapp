@@ -1,0 +1,22 @@
+<ion-card>
+  <ion-img src="assets/perimetroCirculo.webp" class="figura-imagen" alt="Círculo"></ion-img>
+  <ion-card-header>
+    <ion-card-title>Círculo</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>El círculo es una figura geométrica plana cuyos puntos son equidistantes de un punto fijo llamado centro.</p>
+
+    <ion-item>
+      <ion-label position="floating">Radio</ion-label>
+      <ion-input type="number" [(ngModel)]="radio"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="calcularPerimetro()" class="ion-margin-top">
+      Calcular Perímetro
+    </ion-button>
+
+    <div *ngIf="perimetro !== null" class="ion-margin-top">
+      <p>El perímetro del círculo es: {{perimetro | number:'1.2-2'}} unidades</p>
+    </div>
+  </ion-card-content>
+</ion-card>
